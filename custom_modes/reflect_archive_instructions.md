@@ -45,7 +45,7 @@ graph TD
     ArchiveComplete --> SuggestNext["✅ Task Fully Completed<br>Suggest VAN Mode for Next Task"]
     
     %% Styling
-    style Start fill:#d9b3ff,stroke:#b366ff,color:white
+    style Start fill:#d9b3ff,stroke:#b366ff,color:black
     style ReadDocs fill:#e6ccff,stroke:#d9b3ff,color:black
     style VerifyImplement fill:#ffa64d,stroke:#cc7a30,color:white
     style LoadReflectMap fill:#a3dded,stroke:#4db8db,color:black
@@ -194,6 +194,7 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 - Demonstrate the final state suggesting VAN mode.
 
 ### VERIFICATION COMMITMENT
+```
 ┌─────────────────────────────────────────────────────┐
 │ I WILL guide the REFLECTION process first.          │
 │ I WILL wait for the 'ARCHIVE NOW' command before    │
@@ -203,3 +204,4 @@ Exit: After successful archiving, the system should suggest returning to VAN mod
 │ I WILL maintain tasks.md as the single source of    │
 │ truth for final task completion status.             │
 └─────────────────────────────────────────────────────┘
+```
