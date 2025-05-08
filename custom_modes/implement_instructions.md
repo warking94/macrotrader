@@ -58,7 +58,7 @@ graph TD
     
     %% Styling
     style Start fill:#4da6ff,stroke:#0066cc,color:white
-    style ReadDocs fill:#80bfff,stroke:#4da6ff
+    style ReadDocs fill:#80bfff,stroke:#4da6ff,color:black
     style CheckLevel fill:#d94dbb,stroke:#a3378a,color:white
     style L1Process fill:#4dbb5f,stroke:#36873f,color:white
     style L2Process fill:#ffa64d,stroke:#cc7a30,color:white
@@ -148,11 +148,11 @@ graph TD
     Test --> Doc["Document the solution"]
     
     style L1 fill:#4dbb5f,stroke:#36873f,color:white
-    style Review fill:#d6f5dd,stroke:#a3e0ae
-    style Locate fill:#d6f5dd,stroke:#a3e0ae
-    style Fix fill:#d6f5dd,stroke:#a3e0ae
-    style Test fill:#d6f5dd,stroke:#a3e0ae
-    style Doc fill:#d6f5dd,stroke:#a3e0ae
+    style Review fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Locate fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Fix fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Test fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Doc fill:#d6f5dd,stroke:#a3e0ae,color:black
 ```
 
 ### Level 2: Enhancement Build
@@ -168,11 +168,11 @@ graph TD
     Integration --> Doc["Document build details"]
     
     style L2 fill:#ffa64d,stroke:#cc7a30,color:white
-    style Plan fill:#ffe6cc,stroke:#ffa64d
-    style Components fill:#ffe6cc,stroke:#ffa64d
-    style Test fill:#ffe6cc,stroke:#ffa64d
-    style Integration fill:#ffe6cc,stroke:#ffa64d
-    style Doc fill:#ffe6cc,stroke:#ffa64d
+    style Plan fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Components fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Test fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Integration fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Doc fill:#ffe6cc,stroke:#ffa64d,color:black
 ```
 
 ### Level 3-4: Phased Build
@@ -190,13 +190,13 @@ graph TD
     Test --> Doc["Detailed documentation"]
     
     style L34 fill:#ff5555,stroke:#cc0000,color:white
-    style CreativeReview fill:#ffaaaa,stroke:#ff8080
-    style Phases fill:#ffaaaa,stroke:#ff8080
-    style Phase1 fill:#ffaaaa,stroke:#ff8080
-    style Phase2 fill:#ffaaaa,stroke:#ff8080
-    style Phase3 fill:#ffaaaa,stroke:#ff8080
-    style Test fill:#ffaaaa,stroke:#ff8080
-    style Doc fill:#ffaaaa,stroke:#ff8080
+    style CreativeReview fill:#ffaaaa,stroke:#ff8080,color:black
+    style Phases fill:#ffaaaa,stroke:#ff8080,color:black
+    style Phase1 fill:#ffaaaa,stroke:#ff8080,color:black
+    style Phase2 fill:#ffaaaa,stroke:#ff8080,color:black
+    style Phase3 fill:#ffaaaa,stroke:#ff8080,color:black
+    style Test fill:#ffaaaa,stroke:#ff8080,color:black
+    style Doc fill:#ffaaaa,stroke:#ff8080,color:black
 ```
 
 ## COMMAND EXECUTION PRINCIPLES
@@ -211,10 +211,10 @@ graph TD
     CEP --> Testing["Test changes after implementation"]
     
     style CEP fill:#d971ff,stroke:#a33bc2,color:white
-    style Context fill:#e6b3ff,stroke:#d971ff
-    style Platform fill:#e6b3ff,stroke:#d971ff
-    style Documentation fill:#e6b3ff,stroke:#d971ff
-    style Testing fill:#e6b3ff,stroke:#d971ff
+    style Context fill:#e6b3ff,stroke:#d971ff,color:black
+    style Platform fill:#e6b3ff,stroke:#d971ff,color:black
+    style Documentation fill:#e6b3ff,stroke:#d971ff,color:black
+    style Testing fill:#e6b3ff,stroke:#d971ff,color:black
 ```
 
 Focus on effective building while adapting your approach to the platform environment. Trust your capabilities to execute appropriate commands for the current system without excessive prescriptive guidance.
