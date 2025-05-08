@@ -61,9 +61,9 @@ graph TD
     
     %% Styling
     style Start fill:#d971ff,stroke:#a33bc2,color:white
-    style ReadTasks fill:#e6b3ff,stroke:#d971ff
-    style Identify fill:#80bfff,stroke:#4da6ff
-    style Prioritize fill:#80bfff,stroke:#4da6ff
+    style ReadTasks fill:#e6b3ff,stroke:#d971ff,color:black
+    style Identify fill:#80bfff,stroke:#4da6ff,color:black
+    style Prioritize fill:#80bfff,stroke:#4da6ff,color:black
     style TypeCheck fill:#d94dbb,stroke:#a3378a,color:white
     style ArchDesign fill:#4da6ff,stroke:#0066cc,color:white
     style AlgoDesign fill:#4dbb5f,stroke:#36873f,color:white
@@ -160,13 +160,13 @@ graph TD
     Select --> Doc["Document implementation guidelines"]
     
     style AD fill:#4da6ff,stroke:#0066cc,color:white
-    style Req fill:#cce6ff,stroke:#80bfff
-    style Options fill:#cce6ff,stroke:#80bfff
-    style Pros fill:#cce6ff,stroke:#80bfff
-    style Cons fill:#cce6ff,stroke:#80bfff
-    style Eval fill:#cce6ff,stroke:#80bfff
-    style Select fill:#cce6ff,stroke:#80bfff
-    style Doc fill:#cce6ff,stroke:#80bfff
+    style Req fill:#cce6ff,stroke:#80bfff,color:black
+    style Options fill:#cce6ff,stroke:#80bfff,color:black
+    style Pros fill:#cce6ff,stroke:#80bfff,color:black
+    style Cons fill:#cce6ff,stroke:#80bfff,color:black
+    style Eval fill:#cce6ff,stroke:#80bfff,color:black
+    style Select fill:#cce6ff,stroke:#80bfff,color:black
+    style Doc fill:#cce6ff,stroke:#80bfff,color:black
 ```
 
 ### Algorithm Design Process
@@ -186,15 +186,15 @@ graph TD
     Select --> Doc["Document implementation guidelines"]
     
     style ALGO fill:#4dbb5f,stroke:#36873f,color:white
-    style Req fill:#d6f5dd,stroke:#a3e0ae
-    style Options fill:#d6f5dd,stroke:#a3e0ae
-    style Analysis fill:#d6f5dd,stroke:#a3e0ae
-    style TC fill:#d6f5dd,stroke:#a3e0ae
-    style SC fill:#d6f5dd,stroke:#a3e0ae
-    style Edge fill:#d6f5dd,stroke:#a3e0ae
-    style Scale fill:#d6f5dd,stroke:#a3e0ae
-    style Select fill:#d6f5dd,stroke:#a3e0ae
-    style Doc fill:#d6f5dd,stroke:#a3e0ae
+    style Req fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Options fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Analysis fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style TC fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style SC fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Edge fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Scale fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Select fill:#d6f5dd,stroke:#a3e0ae,color:black
+    style Doc fill:#d6f5dd,stroke:#a3e0ae,color:black
 ```
 
 ### UI/UX Design Process
@@ -214,15 +214,15 @@ graph TD
     Select --> Doc["Document implementation guidelines"]
     
     style UIUX fill:#ffa64d,stroke:#cc7a30,color:white
-    style Req fill:#ffe6cc,stroke:#ffa64d
-    style Options fill:#ffe6cc,stroke:#ffa64d
-    style Analysis fill:#ffe6cc,stroke:#ffa64d
-    style UX fill:#ffe6cc,stroke:#ffa64d
-    style A11y fill:#ffe6cc,stroke:#ffa64d
-    style Cons fill:#ffe6cc,stroke:#ffa64d
-    style Comp fill:#ffe6cc,stroke:#ffa64d
-    style Select fill:#ffe6cc,stroke:#ffa64d
-    style Doc fill:#ffe6cc,stroke:#ffa64d
+    style Req fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Options fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Analysis fill:#ffe6cc,stroke:#ffa64d,color:black
+    style UX fill:#ffe6cc,stroke:#ffa64d,color:black
+    style A11y fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Cons fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Comp fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Select fill:#ffe6cc,stroke:#ffa64d,color:black
+    style Doc fill:#ffe6cc,stroke:#ffa64d,color:black
 ```
 
 ## CREATIVE PHASE DOCUMENTATION
@@ -242,15 +242,15 @@ graph TD
     Verify --> Exit["🎨🎨🎨 EXITING CREATIVE PHASE"]
     
     style CPD fill:#d971ff,stroke:#a33bc2,color:white
-    style Entry fill:#f5d9f0,stroke:#e699d9
-    style Desc fill:#f5d9f0,stroke:#e699d9
-    style Req fill:#f5d9f0,stroke:#e699d9
-    style Options fill:#f5d9f0,stroke:#e699d9
-    style Analysis fill:#f5d9f0,stroke:#e699d9
-    style Recommend fill:#f5d9f0,stroke:#e699d9
-    style Impl fill:#f5d9f0,stroke:#e699d9
-    style Verify fill:#f5d9f0,stroke:#e699d9
-    style Exit fill:#f5d9f0,stroke:#e699d9
+    style Entry fill:#f5d9f0,stroke:#e699d9,color:black
+    style Desc fill:#f5d9f0,stroke:#e699d9,color:black
+    style Req fill:#f5d9f0,stroke:#e699d9,color:black
+    style Options fill:#f5d9f0,stroke:#e699d9,color:black
+    style Analysis fill:#f5d9f0,stroke:#e699d9,color:black
+    style Recommend fill:#f5d9f0,stroke:#e699d9,color:black
+    style Impl fill:#f5d9f0,stroke:#e699d9,color:black
+    style Verify fill:#f5d9f0,stroke:#e699d9,color:black
+    style Exit fill:#f5d9f0,stroke:#e699d9,color:black
 ```
 
 ## VERIFICATION
