@@ -57,14 +57,14 @@ graph TD
 
     %% Styling
     style Start fill:#4da6ff,stroke:#0066cc,color:white
-    style ReadTasks fill:#80bfff,stroke:#4da6ff
+    style ReadTasks fill:#80bfff,stroke:#4da6ff,color:black
     style CheckLevel fill:#d94dbb,stroke:#a3378a,color:white
     style Level2 fill:#4dbb5f,stroke:#36873f,color:white
     style Level3 fill:#ffa64d,stroke:#cc7a30,color:white
     style Level4 fill:#ff5555,stroke:#cc0000,color:white
     style CheckCreative fill:#d971ff,stroke:#a33bc2,color:white
-    style RecCreative fill:#ffa64d,stroke:#cc7a30
-    style RecImplement fill:#4dbb5f,stroke:#36873f
+    style RecCreative fill:#ffa64d,stroke:#cc7a30,color:black
+    style RecImplement fill:#4dbb5f,stroke:#36873f,color:black
 ```
 
 ## IMPLEMENTATION STEPS
@@ -145,12 +145,12 @@ graph TD
     Doc --> TS["✅ Testing strategy"]
     
     style L2 fill:#4dbb5f,stroke:#36873f,color:white
-    style Doc fill:#80bfff,stroke:#4da6ff
-    style OV fill:#cce6ff,stroke:#80bfff
-    style FM fill:#cce6ff,stroke:#80bfff
-    style IS fill:#cce6ff,stroke:#80bfff
-    style PC fill:#cce6ff,stroke:#80bfff
-    style TS fill:#cce6ff,stroke:#80bfff
+    style Doc fill:#80bfff,stroke:#4da6ff,color:black
+    style OV fill:#cce6ff,stroke:#80bfff,color:black
+    style FM fill:#cce6ff,stroke:#80bfff,color:black
+    style IS fill:#cce6ff,stroke:#80bfff,color:black
+    style PC fill:#cce6ff,stroke:#80bfff,color:black
+    style TS fill:#cce6ff,stroke:#80bfff,color:black
 ```
 
 ### Level 3-4: Comprehensive Planning
@@ -170,15 +170,15 @@ graph TD
     Doc --> CP["🎨 Creative phase components"]
     
     style L34 fill:#ffa64d,stroke:#cc7a30,color:white
-    style Doc fill:#80bfff,stroke:#4da6ff
-    style RA fill:#ffe6cc,stroke:#ffa64d
-    style CA fill:#ffe6cc,stroke:#ffa64d
-    style AC fill:#ffe6cc,stroke:#ffa64d
-    style IS fill:#ffe6cc,stroke:#ffa64d
-    style DS fill:#ffe6cc,stroke:#ffa64d
-    style DP fill:#ffe6cc,stroke:#ffa64d
-    style CM fill:#ffe6cc,stroke:#ffa64d
-    style CP fill:#ffe6cc,stroke:#ffa64d
+    style Doc fill:#80bfff,stroke:#4da6ff,color:black
+    style RA fill:#ffe6cc,stroke:#ffa64d,color:black
+    style CA fill:#ffe6cc,stroke:#ffa64d,color:black
+    style AC fill:#ffe6cc,stroke:#ffa64d,color:black
+    style IS fill:#ffe6cc,stroke:#ffa64d,color:black
+    style DS fill:#ffe6cc,stroke:#ffa64d,color:black
+    style DP fill:#ffe6cc,stroke:#ffa64d,color:black
+    style CM fill:#ffe6cc,stroke:#ffa64d,color:black
+    style CP fill:#ffe6cc,stroke:#ffa64d,color:black
 ```
 
 ## CREATIVE PHASE IDENTIFICATION
@@ -195,10 +195,10 @@ graph TD
     Types --> C["🎨 UI/UX Design"]
     
     style CPI fill:#d971ff,stroke:#a33bc2,color:white
-    style Question fill:#80bfff,stroke:#4da6ff
-    style Identify fill:#ffa64d,stroke:#cc7a30
-    style Skip fill:#4dbb5f,stroke:#36873f
-    style Types fill:#ffe6cc,stroke:#ffa64d
+    style Question fill:#80bfff,stroke:#4da6ff,color:black
+    style Identify fill:#ffa64d,stroke:#cc7a30,color:black
+    style Skip fill:#4dbb5f,stroke:#36873f,color:black
+    style Types fill:#ffe6cc,stroke:#ffa64d,color:black
 ```
 
 Identify components that require creative problem-solving or significant design decisions. For these components, flag them for the CREATIVE mode. Focus on architectural considerations, algorithm design needs, or UI/UX requirements that would benefit from structured design exploration.
