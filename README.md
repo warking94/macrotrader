@@ -17,10 +17,10 @@ graph TD
     Modes --> ARCHIVE["ARCHIVE: Documentation"]
     
     style Main fill:#4da6ff,stroke:#0066cc,color:white
-    style Modes fill:#f8d486,stroke:#e8b84d
-    style Rules fill:#80ffaa,stroke:#4dbb5f
-    style Visual fill:#d9b3ff,stroke:#b366ff
-    style Token fill:#ff9980,stroke:#ff5533
+    style Modes fill:#f8d486,stroke:#e8b84d,color:black
+    style Rules fill:#80ffaa,stroke:#4dbb5f,color:black
+    style Visual fill:#d9b3ff,stroke:#b366ff,color:black
+    style Token fill:#ff9980,stroke:#ff5533,color:black
 ```
 
 > **Personal Note**: Memory Bank is my personal hobby project that I develop for my own use in coding projects. As this is a personal project, I don't maintain an issues tracker or actively collect feedback. However, if you're using these rules and encounter issues, one of the great advantages is that you can ask the Cursor AI directly to modify or update the rules to better suit your specific workflow. The system is designed to be adaptable by the AI, allowing you to customize it for your own needs without requiring external support.
