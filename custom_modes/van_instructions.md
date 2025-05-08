@@ -112,54 +112,54 @@ graph TD
     Error -->|"Rule Loading"| UseCorrectFn["✓ Use fetch_rules<br>NOT read_file"]
     
     %% Styling
-    style Start fill:#f8d486,stroke:#e8b84d
-    style CommandDetect fill:#f8d486,stroke:#e8b84d
-    style VAN fill:#ccf,stroke:#333
-    style Plan fill:#cfc,stroke:#333
-    style Creative fill:#fcf,stroke:#333
-    style Implement fill:#cff,stroke:#333
-    style QA fill:#fcc,stroke:#333
+    style Start fill:#f8d486,stroke:#e8b84d,color:black
+    style CommandDetect fill:#f8d486,stroke:#e8b84d,color:black
+    style VAN fill:#ccf,stroke:#333,color:black
+    style Plan fill:#cfc,stroke:#333,color:black
+    style Creative fill:#fcf,stroke:#333,color:black
+    style Implement fill:#cff,stroke:#333,color:black
+    style QA fill:#fcc,stroke:#333,color:black
     
-    style VanResp fill:#d9e6ff,stroke:#99ccff
-    style PlanResp fill:#d9e6ff,stroke:#99ccff
-    style CreativeResp fill:#d9e6ff,stroke:#99ccff
-    style ImplResp fill:#d9e6ff,stroke:#99ccff
-    style QAResp fill:#d9e6ff,stroke:#99ccff
+    style VanResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style PlanResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style CreativeResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style ImplResp fill:#d9e6ff,stroke:#99ccff,color:black
+    style QAResp fill:#d9e6ff,stroke:#99ccff,color:black
     
-    style LoadVan fill:#a3dded,stroke:#4db8db
-    style LoadPlan fill:#a3dded,stroke:#4db8db
-    style LoadCreative fill:#a3dded,stroke:#4db8db
-    style LoadImpl fill:#a3dded,stroke:#4db8db
-    style LoadQA fill:#a3dded,stroke:#4db8db
+    style LoadVan fill:#a3dded,stroke:#4db8db,color:black
+    style LoadPlan fill:#a3dded,stroke:#4db8db,color:black
+    style LoadCreative fill:#a3dded,stroke:#4db8db,color:black
+    style LoadImpl fill:#a3dded,stroke:#4db8db,color:black
+    style LoadQA fill:#a3dded,stroke:#4db8db,color:black
     
-    style ExecVan fill:#a3e0ae,stroke:#4dbb5f
-    style ExecPlan fill:#a3e0ae,stroke:#4dbb5f
-    style ExecCreative fill:#a3e0ae,stroke:#4dbb5f
-    style ExecImpl fill:#a3e0ae,stroke:#4dbb5f
-    style ExecQA fill:#a3e0ae,stroke:#4dbb5f
+    style ExecVan fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecPlan fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecCreative fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecImpl fill:#a3e0ae,stroke:#4dbb5f,color:black
+    style ExecQA fill:#a3e0ae,stroke:#4dbb5f,color:black
     
-    style VerifyVan fill:#e699d9,stroke:#d94dbb
-    style VerifyPlan fill:#e699d9,stroke:#d94dbb
-    style VerifyCreative fill:#e699d9,stroke:#d94dbb
-    style VerifyImpl fill:#e699d9,stroke:#d94dbb
-    style VerifyQA fill:#e699d9,stroke:#d94dbb
+    style VerifyVan fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyPlan fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyCreative fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyImpl fill:#e699d9,stroke:#d94dbb,color:black
+    style VerifyQA fill:#e699d9,stroke:#d94dbb,color:black
     
-    style CompleteVan fill:#8cff8c,stroke:#4dbb5f
-    style CompletePlan fill:#8cff8c,stroke:#4dbb5f
-    style CompleteCreative fill:#8cff8c,stroke:#4dbb5f
-    style CompleteImpl fill:#8cff8c,stroke:#4dbb5f
-    style CompleteQA fill:#8cff8c,stroke:#4dbb5f
+    style CompleteVan fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompletePlan fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteCreative fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteImpl fill:#8cff8c,stroke:#4dbb5f,color:black
+    style CompleteQA fill:#8cff8c,stroke:#4dbb5f,color:black
     
-    style MemoryBank fill:#f9d77e,stroke:#d9b95c,stroke-width:2px
-    style tasks fill:#f9d77e,stroke:#d9b95c
-    style projBrief fill:#f9d77e,stroke:#d9b95c
-    style active fill:#f9d77e,stroke:#d9b95c
-    style progress fill:#f9d77e,stroke:#d9b95c
+    style MemoryBank fill:#f9d77e,stroke:#d9b95c,stroke-width:2px,color:black
+    style tasks fill:#f9d77e,stroke:#d9b95c,color:black
+    style projBrief fill:#f9d77e,stroke:#d9b95c,color:black
+    style active fill:#f9d77e,stroke:#d9b95c,color:black
+    style progress fill:#f9d77e,stroke:#d9b95c,color:black
     
-    style Error fill:#ff5555,stroke:#cc0000,color:white,stroke-width:2px
-    style BlockCreative fill:#ffaaaa,stroke:#ff8080
-    style BlockMulti fill:#ffaaaa,stroke:#ff8080
-    style UseCorrectFn fill:#8cff8c,stroke:#4dbb5f
+    style Error fill:#ff5555,stroke:#cc0000,color:white,stroke-width:2px,color:black
+    style BlockCreative fill:#ffaaaa,stroke:#ff8080,color:black
+    style BlockMulti fill:#ffaaaa,stroke:#ff8080,color:black
+    style UseCorrectFn fill:#8cff8c,stroke:#4dbb5f,color:black
 ```
 
 ## MEMORY BANK FILE STRUCTURE
@@ -175,13 +175,13 @@ flowchart TD
     AC --> P([progress.md])
     AC --> Tasks([tasks.md])
 
-    style PB fill:#f9d77e,stroke:#d9b95c
-    style PC fill:#a8d5ff,stroke:#88b5e0
-    style SP fill:#a8d5ff,stroke:#88b5e0
-    style TC fill:#a8d5ff,stroke:#88b5e0
-    style AC fill:#c5e8b7,stroke:#a5c897
-    style P fill:#f4b8c4,stroke:#d498a4
-    style Tasks fill:#f4b8c4,stroke:#d498a4,stroke-width:3px
+    style PB fill:#f9d77e,stroke:#d9b95c,color:black
+    style PC fill:#a8d5ff,stroke:#88b5e0,color:black
+    style SP fill:#a8d5ff,stroke:#88b5e0,color:black
+    style TC fill:#a8d5ff,stroke:#88b5e0,color:black
+    style AC fill:#c5e8b7,stroke:#a5c897,color:black
+    style P fill:#f4b8c4,stroke:#d498a4,color:black
+    style Tasks fill:#f4b8c4,stroke:#d498a4,stroke-width:3px,color:black
 ```
 
 ## VERIFICATION COMMITMENT
