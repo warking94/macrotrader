@@ -112,25 +112,25 @@ graph BT
     L2 --- LC3
 
     %% Styling
-    style E1 fill:#f9d77e,stroke:#d9b95c
-    style E2 fill:#f9d77e,stroke:#d9b95c
+    style E1 fill:#f9d77e,stroke:#d9b95c,color:black
+    style E2 fill:#f9d77e,stroke:#d9b95c,color:black
     
-    style M1 fill:#a8d5ff,stroke:#88b5e0
-    style M2 fill:#a8d5ff,stroke:#88b5e0
+    style M1 fill:#a8d5ff,stroke:#88b5e0,color:black
+    style M2 fill:#a8d5ff,stroke:#88b5e0,color:black
     
-    style L1 fill:#c5e8b7,stroke:#a5c897
-    style L2 fill:#c5e8b7,stroke:#a5c897
-    style L3 fill:#c5e8b7,stroke:#a5c897
+    style L1 fill:#c5e8b7,stroke:#a5c897,color:black
+    style L2 fill:#c5e8b7,stroke:#a5c897,color:black
+    style L3 fill:#c5e8b7,stroke:#a5c897,color:black
     
-    style KT1 fill:#ffcccc,stroke:#ff9999
-    style KT2 fill:#ffcccc,stroke:#ff9999
-    style KT3 fill:#ffcccc,stroke:#ff9999
-    style KT4 fill:#ffcccc,stroke:#ff9999
-    style KT5 fill:#ffcccc,stroke:#ff9999
+    style KT1 fill:#ffcccc,stroke:#ff9999,color:black
+    style KT2 fill:#ffcccc,stroke:#ff9999,color:black
+    style KT3 fill:#ffcccc,stroke:#ff9999,color:black
+    style KT4 fill:#ffcccc,stroke:#ff9999,color:black
+    style KT5 fill:#ffcccc,stroke:#ff9999,color:black
     
-    style LC1 fill:#ffd9b3,stroke:#ffb366
-    style LC2 fill:#d9f2d9,stroke:#97d097
-    style LC3 fill:#d9b3ff,stroke:#b366ff
+    style LC1 fill:#ffd9b3,stroke:#ffb366,color:black
+    style LC2 fill:#d9f2d9,stroke:#97d097,color:black
+    style LC3 fill:#d9b3ff,stroke:#b366ff,color:black
 
     %% Subgraph Styling
     subgraph "🌟 Latest Phase: Integration & Scale"
