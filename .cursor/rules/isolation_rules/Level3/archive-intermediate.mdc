@@ -3,9 +3,6 @@ description:
 globs: archive-intermediate.mdc
 alwaysApply: false
 ---
-description: Archiving guidelines for Level 3 (Intermediate Feature) tasks, focusing on consolidating feature-specific documentation for future reference and maintainability.
-globs: archive-intermediate.mdc
-alwaysApply: false
 
 # LEVEL 3 ARCHIVE: INTERMEDIATE FEATURE DOCUMENTATION
 
@@ -16,8 +13,8 @@ alwaysApply: false
 1.  **Confirm Reflection Complete:** Verify in `memory-bank/tasks.md` that the reflection phase for this feature is marked as complete and `memory-bank/reflection-[feature_id].md` exists and is finalized.
 2.  **Gather All Feature-Specific Documents:**
     * The feature plan section from `memory-bank/tasks.md` (or a copy of it).
-    * All `memory-bank/creative-[aspect_name].md` documents related to this feature.
-    * The `memory-bank/reflection-[feature_id].md` document.
+    * All `memory-bank/creative/creative-[aspect_name].md` documents related to this feature.
+    * The `memory-bank/reflection/reflection-[feature_id].md` document.
     * Key diagrams or architectural notes from `memory-bank/progress.md` if not captured elsewhere.
     * A link to the primary commit(s) or feature branch merge for the implemented code.
 
@@ -53,7 +50,7 @@ graph TD
       * List the main functional and non-functional requirements this feature addressed.
   * **3. Design Decisions & Creative Outputs:**
       * Summary of key design choices.
-      * Direct links to all relevant `memory-bank/creative-[aspect_name].md` documents.
+      * Direct links to all relevant `memory-bank/creative/creative-[aspect_name].md` documents.
       * Link to `memory-bank/style-guide.md` version used (if applicable).
   * **4. Implementation Summary:**
       * High-level overview of how the feature was implemented.
@@ -64,11 +61,14 @@ graph TD
       * Brief summary of the testing strategy employed for this feature (unit, integration, E2E).
       * Outcome of the testing.
   * **6. Reflection & Lessons Learned:**
-      * Direct link to `memory-bank/reflection-[feature_id].md`.
+      * Direct link to `memory-bank/reflection/reflection-[feature_id].md`.
       * Optionally, copy 1-2 most critical lessons directly into the archive summary.
   * **7. Known Issues or Future Considerations (Optional, if any remaining from reflection):**
       * Any minor known issues deferred.
       * Potential future enhancements related to this feature.
+
+### Key Files and Components Affected (from tasks.md)
+[Summary or direct copy of file/component checklists from the original tasks.md for this project. This provides a quick reference to the scope of changes at a component/file level.]
 
 ## 📌 What to Emphasize in L3 Archiving
 
