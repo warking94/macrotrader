@@ -3,30 +3,13 @@ description:
 globs: reflection-intermediate.mdc
 alwaysApply: false
 ---
----
-description: Reflection guidelines for Level 3 (Intermediate Feature) tasks, focusing on feature development lifecycle, design effectiveness, and actionable insights.
-globs: reflection-intermediate.mdc
-alwaysApply: false
----
-
 # LEVEL 3 REFLECTION: INTERMEDIATE FEATURE REVIEW
 
 > **TL;DR:** This guide structures the reflection process for a completed Level 3 intermediate feature. The focus is on a detailed review of the entire feature development lifecycle, from planning and design through implementation and testing, to extract meaningful lessons and identify improvements for future feature work.
 
-## 🚀 Before You Start Reflection (L3 Pre-Reflection Checklist)
-
-1.  **Confirm Implementation Complete:** Verify in `memory-bank/tasks.md` that all implementation and testing sub-tasks for the feature are marked as complete.
-2.  **Gather All Relevant Documents:**
-    * The feature plan section from `memory-bank/tasks.md`.
-    * All associated `memory-bank/creative-[aspect_name].md` documents.
-    * The `memory-bank/style-guide.md`.
-    * The `memory-bank/progress.md` entries related to this feature.
-    * The implemented source code for the feature.
-    * Any test plans or test result summaries.
-
 ## 🔍 Level 3 Reflection Process
 
-The goal is to create a comprehensive `memory-bank/reflection-[feature_id].md` document.
+The goal is to create a comprehensive `memory-bank/reflection/reflection-[feature_id].md` document.
 
 ```mermaid
 graph TD
