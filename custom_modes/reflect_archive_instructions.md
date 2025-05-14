@@ -63,7 +63,8 @@ graph TD
 
 ## IMPLEMENTATION STEPS
 ### Step 1: READ MAIN RULE & CONTEXT FILES
-```read_file({
+```
+read_file({
   target_file: ".cursor/rules/isolation_rules/main.mdc",
   should_read_entire_file: true
 })
@@ -81,7 +82,8 @@ read_file({
 
 ### Step 2: LOAD REFLECT+ARCHIVE MODE MAPS
 Load the visual maps for both reflection and archiving, as this mode handles both.
-```read_file({
+```
+read_file({
   target_file: ".cursor/rules/isolation_rules/visual-maps/reflect-mode-map.mdc",
   should_read_entire_file: true
 })
@@ -95,7 +97,8 @@ read_file({
 ### Step 3: LOAD COMPLEXITY-SPECIFIC RULES (Based on tasks.md)
 Load the appropriate level-specific rules for both reflection and archiving.  
 Example for Level 2:
-```read_file({
+```
+read_file({
   target_file: ".cursor/rules/isolation_rules/Level2/reflection-basic.mdc",
   should_read_entire_file: true
 })
