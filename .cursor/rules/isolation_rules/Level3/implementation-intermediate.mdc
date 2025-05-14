@@ -3,29 +3,9 @@ description:
 globs: implementation-intermediate.mdc
 alwaysApply: false
 ---
----
-description: Implementation guidelines for Level 3 (Intermediate Feature) tasks, focusing on structured feature build, adherence to design, and robust testing.
-globs: implementation-intermediate.mdc
-alwaysApply: false
----
-
 # LEVEL 3 IMPLEMENTATION: BUILDING INTERMEDIATE FEATURES
 
 > **TL;DR:** This guide focuses on the systematic implementation of a planned and designed Level 3 feature. It emphasizes modular development, strict adherence to creative decisions and the style guide, integration with existing systems, and thorough feature-specific testing.
-
-## 🚀 Before You Start Building (L3 Pre-Implementation Checklist)
-
-1.  **Confirm Core Path Knowledge:** Verify that `.cursor/rules/isolation_rules/Core/memory-bank-paths.mdc` is loaded and its paths for core Memory Bank files are internalized.
-2.  **Review Feature Plan (`memory-bank/tasks.md`):**
-    * Thoroughly understand the detailed feature plan, requirements, component breakdown, and implementation strategy outlined for this Level 3 task.
-3.  **Review Creative Design Documents:**
-    * Load and meticulously review all relevant `memory-bank/creative-[aspect_name].md` documents produced during the CREATIVE phase for this feature.
-    * Load and internalize `memory-bank/style-guide.md`. All UI implementation MUST adhere to this.
-4.  **Load Command Execution Rules:** Ensure `.cursor/rules/isolation_rules/Core/command-execution.mdc` is loaded for best practices in terminal operations.
-5.  **Development Environment Setup:**
-    * Create a new feature branch in Git (e.g., `feature/[task_id]-[feature_name]`).
-    * Install any new project dependencies identified in the PLAN or CREATIVE phase.
-    * Ensure your local development environment is configured and running correctly.
 
 ## 🛠️ Level 3 Feature Implementation Workflow
 
@@ -85,7 +65,7 @@ graph TD
   * **`memory-bank/progress.md`:** Make regular entries detailing:
       * Modules/components completed.
       * Key decisions made during implementation (if minor and not warranting a full CREATIVE cycle).
-      * Significant commands executed (and their outcomes).
+      * Files significantly modified
       * Test results for major integration points.
       * Any deviations from the plan or creative designs, with rationale.
   * **Code Comments:** Write clear, concise comments explaining complex logic, assumptions, or TODOs.
