@@ -126,40 +126,35 @@ For each mode, configure as follows (If MCPs are showing, you can keep them on, 
    - **Advanced options**: Paste from `custom_modes/van_instructions.md`
 
 
-<img src="assets/van_mode_1.png" height="300"/>
-<img src="assets/van_mode_2.png" height="300"/>
+<img src="assets/van_mode_1.png" height="300" style="display: inline-block;"/> <img src="assets/van_mode_2.png" height="300" style="display: inline-block;"/>
 
 2. **PLAN MODE** (Task Planning)
    - **Name**: 📋 PLAN
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
    - **Advanced options**: Paste from `custom_modes/plan_instructions.md`
 
-<img src="assets/plan_mode_1.png" height="300"/>
-<img src="assets/plan_mode_2.png" height="300"/>
+<img src="assets/plan_mode_1.png" height="300"/> <img src="assets/plan_mode_2.png" height="300" style="display: inline-block;"/>
 
 3. **CREATIVE MODE** (Design Decisions)
    - **Name**: 🎨 CREATIVE
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
    - **Advanced options**: Paste from `custom_modes/creative_instructions.md`
 
-<img src="assets/creative_mode_1.png" height="300"/>
-<img src="assets/creative_mode_2.png" height="300"/>
+<img src="assets/creative_mode_1.png" height="300"/> <img src="assets/creative_mode_2.png" height="300" style="display: inline-block;"/>
 
 4. **IMPLEMENT MODE** (Code Implementation)
    - **Name**: ⚒️ IMPLEMENT
    - **Tools**: Enable all tools
    - **Advanced options**: Paste from `custom_modes/implement_instructions.md`
 
-<img src="assets/implement_mode_1.png" height="300"/>
-<img src="assets/implement_mode_2.png" height="300"/>
+<img src="assets/implement_mode_1.png" height="300"/> <img src="assets/implement_mode_2.png" height="300" style="display: inline-block;"/>
 
 5. **REFLECT & ARHIVE MODE** (Review)
    - **Name**: 🔍 REFLECT or ARCHIVE
    - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
    - **Advanced options**: Paste from `custom_modes/reflect_archive_instructions.md`
 
-<img src="assets/reflect_mode_1.png" height="300"/>
-<img src="assets/reflect_mode_2.png" height="300"/>
+<img src="assets/reflect_mode_1.png" height="300"/> <img src="assets/reflect_mode_2.png" height="300" style="display: inline-block;"/>
    
 
 > **Note**: REFLECT and ARCHIVE instructions are combined in a single file and mode to optimize for Cursor's character and custom mode limits  while maintaining functionality. Thanks to GitHub user @joshmac007 for implementing this optimization.
@@ -184,13 +179,7 @@ QA is not a separate custom mode but rather a set of validation functions that c
    - **At any point**: Type "QA" to perform technical validation
 
 
-<img src="assets/chat_van.png" height="50"/>
-<img src="assets/chat_plan.png" height="50"/>
-<img src="assets/chat_implement.png" height="50"/>
-<img src="assets/chat_creative.png" height="50"/>
-<img src="assets/chat_implement.png" height="50"/>
-<img src="assets/chat_reflect.png" height="50"/>
-<img src="assets/chat_archive.png" height="50"/>
+<img src="assets/chat_van.png" height="50"/> <img src="assets/chat_plan.png" height="50" style="display: inline-block;"/> <img src="assets/chat_implement.png" height="50" style="display: inline-block;"/> <img src="assets/chat_creative.png" height="50" style="display: inline-block;"/> <img src="assets/chat_implement.png" height="50" style="display: inline-block;"/> <img src="assets/chat_reflect.png" height="50" style="display: inline-block;"/> <img src="assets/chat_archive.png" height="50" style="display: inline-block;"/>
 
 3. **Mode-Specific Commands**:
    ```
@@ -204,6 +193,7 @@ QA is not a separate custom mode but rather a set of validation functions that c
    ```
 
 4. **Starting to work with your project**:
+   
 After successfully installing Memory Bank...
 
 ## Core Files and Their Purposes
