@@ -122,7 +122,7 @@ For each mode, configure as follows (If MCPs are showing, you can keep them on, 
 
 1. **VAN MODE** (Initialization)
    - **Name**: 🔍 VAN
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
+   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Fetch Rules"
    - **Advanced options**: Paste from `custom_modes/van_instructions.md`
 
 
