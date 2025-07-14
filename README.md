@@ -137,7 +137,7 @@ For each mode, configure as follows (If MCPs are showing, you can keep them on, 
 
 3. **CREATIVE MODE** (Design Decisions)
    - **Name**: 🎨 CREATIVE
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
+   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File", "Fetch Rules"
    - **Advanced options**: Paste from `custom_modes/creative_instructions.md`
 
 <img src="assets/creative_mode_1.png" height="300"/> <img src="assets/creative_mode_2.png" height="300" style="display: inline-block;"/>
