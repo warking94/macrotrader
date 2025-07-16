@@ -251,11 +251,11 @@ graph LR
         Reflect["reflect-*.md<br>Review Documents"]
     end
     
-    style Tasks fill:#f9d77e,stroke:#d9b95c,stroke-width:3px
-    style Active fill:#a8d5ff,stroke:#88b5e0
-    style Progress fill:#c5e8b7,stroke:#a5c897
-    style Creative fill:#f4b8c4,stroke:#d498a4
-    style Reflect fill:#b3e6cc,stroke:#66c999
+    style Tasks fill:#f9d77e,stroke:#d9b95c,stroke-width:3px,color:black
+    style Active fill:#a8d5ff,stroke:#88b5e0,color:black
+    style Progress fill:#c5e8b7,stroke:#a5c897,color:black
+    style Creative fill:#f4b8c4,stroke:#d498a4,color:black
+    style Reflect fill:#b3e6cc,stroke:#66c999,color:black
 ```
 
 - **tasks.md**: Central source of truth for task tracking
