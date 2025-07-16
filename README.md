@@ -1,13 +1,14 @@
-# Memory Bank System v0.7-beta
+# Memory Bank System v1.0.0 (Customized)
 
-A token-optimized, hierarchical task management system that integrates with Cursor custom modes for efficient development workflows.
+A token-optimized, hierarchical task management system that integrates with Cursor custom modes for efficient development workflows, **with custom command support**.
 
 ```mermaid
 graph TD
-    Main["Memory Bank System"] --> Modes["Custom Modes"]
+    Main["Memory Bank System<br>v1.0.0 Customized"] --> Modes["Custom Modes"]
     Main --> Rules["Hierarchical Rule Loading"]
     Main --> Visual["Visual Process Maps"]
     Main --> Token["Token Optimization"]
+    Main --> Custom["Custom Commands"]
     
     Modes --> VAN["VAN: Initialization"]
     Modes --> PLAN["PLAN: Task Planning"]
@@ -16,14 +17,43 @@ graph TD
     Modes --> REFLECT["REFLECT: Review"]
     Modes --> ARCHIVE["ARCHIVE: Documentation"]
     
+    Custom --> VanCmd["van / VAN"]
+    Custom --> PlanCmd["plan / PLAN"]
+    Custom --> CreativeCmd["arh / CREATIVE"]
+    Custom --> ImplementCmd["do / IMPLEMENT"]
+    Custom --> QACmd["qa / QA"]
+    Custom --> ReflectCmd["sum / REFLECT"]
+    
     style Main fill:#4da6ff,stroke:#0066cc,color:white
     style Modes fill:#f8d486,stroke:#e8b84d,color:black
     style Rules fill:#80ffaa,stroke:#4dbb5f,color:black
     style Visual fill:#d9b3ff,stroke:#b366ff,color:black
     style Token fill:#ff9980,stroke:#ff5533,color:black
+    style Custom fill:#ffcc99,stroke:#ff9933,color:black
 ```
 
 > **Personal Note**: Memory Bank is my personal hobby project that I develop for my own use in coding projects. As this is a personal project, I don't maintain an issues tracker or actively collect feedback. However, if you're using these rules and encounter issues, one of the great advantages is that you can ask the Cursor AI directly to modify or update the rules to better suit your specific workflow. The system is designed to be adaptable by the AI, allowing you to customize it for your own needs without requiring external support.
+
+## 🚀 What's New in v1.0.0
+
+This fork adds **custom command support** to Memory Bank while maintaining full backward compatibility:
+
+### ✨ New Custom Commands
+- `van` → VAN Mode (alternative to `VAN`)
+- `plan` → PLAN Mode (alternative to `PLAN`)
+- `arh` → CREATIVE Mode (alternative to `CREATIVE`)
+- `do` → IMPLEMENT Mode (alternative to `IMPLEMENT`)
+- `qa` → QA Mode (alternative to `QA`)
+- `sum` → REFLECT Mode (alternative to `REFLECT`)
+
+### ✅ Backward Compatibility
+All original commands continue to work:
+- `VAN`, `PLAN`, `CREATIVE`, `IMPLEMENT`, `QA`, `REFLECT`, `ARCHIVE`
+
+### 🔧 Easy Installation
+- Automatic installation script: `./install.sh`
+- Manual installation instructions
+- Comprehensive testing tools
 
 ## About Memory Bank
 
@@ -31,12 +61,13 @@ Memory Bank is a personal project that provides a structured approach to develop
 
 ### Token-Optimized Architecture
 
-Version 0.7-beta introduces significant token optimization improvements:
+Version 1.0.0 introduces custom command support while maintaining all v0.7-beta optimizations:
 
 - **Hierarchical Rule Loading**: Only loads essential rules initially with specialized lazy-loading
 - **Progressive Documentation**: Implements concise templates that scale with task complexity
 - **Optimized Mode Transitions**: Preserves critical context efficiently between modes
 - **Level-Specific Workflows**: Adapts documentation requirements to task complexity
+- **Custom Command Support**: Flexible command system with backward compatibility
 
 See the [Memory Bank Optimizations](MEMORY_BANK_OPTIMIZATIONS.md) document for detailed information about all optimization approaches.
 
@@ -49,19 +80,9 @@ While Cursor's documentation describes custom modes as primarily standalone conf
 - **Shared Memory**: Persistent state maintained across mode transitions via Memory Bank files
 - **Adaptive Behavior**: Each mode adjusts its recommendations based on project complexity
 - **Built-in QA Functions**: QA capabilities can be called from any mode for technical validation
+- **Custom Commands**: Flexible command system supporting both original and custom commands
 
 This approach transforms custom modes from simple AI personalities into components of a coordinated development system with specialized phases working together.
-
-### CREATIVE Mode and Claude's "Think" Tool
-
-The CREATIVE mode in Memory Bank is conceptually based on Anthropic's Claude "Think" tool methodology, as described in their [engineering blog](https://www.anthropic.com/engineering/claude-think-tool). The v0.7-beta implements an optimized version with:
-
-- Progressive documentation with tabular option comparison
-- "Detail-on-demand" approach that preserves token efficiency
-- Structured templates that scale with complexity level
-- Efficient context preservation for implementation phases
-
-For a detailed explanation of how Memory Bank implements these principles, see the [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md) document.
 
 ## Key Features
 
@@ -71,6 +92,7 @@ For a detailed explanation of how Memory Bank implements these principles, see t
 - **Mode-Specific Visual Maps**: Clear visual representations for each development phase
 - **Level-Specific Workflows**: Adapted processes based on complexity (Levels 1-4)
 - **Platform-Aware Commands**: Automatically adapts commands to your operating system
+- **Custom Command Support**: Flexible command system with backward compatibility
 
 ## Installation Instructions
 
@@ -84,10 +106,10 @@ For a detailed explanation of how Memory Bank implements these principles, see t
 
 ### Step 1: Get the Files
 
-Simply clone this repository into your project directory:
+Clone this customized repository into your project directory:
 
 ```
-git clone https://github.com/vanzan01/cursor-memory-bank.git
+git clone https://github.com/YOUR_USERNAME/cursor-memory-bank.git
 ```
 
 #### Alternative (Manual)
@@ -98,7 +120,19 @@ After extracting it from the ZIP file, follow the steps below.
 
 Note: other documents are not necessary for memory bank operation, they are explanatory documents. You can copy them to a folder like `memory_bank_documents`.
 
-### Step 2: Setting Up Custom Modes in Cursor
+### Step 2: Install Custom Commands (Optional)
+
+#### Automatic Installation
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+#### Manual Installation
+1. Create a backup of the original `custom_modes/van_instructions.md`
+2. The customized version is already included in this fork
+
+### Step 3: Setting Up Custom Modes in Cursor
 
 **This is the most critical and challenging part of the setup.** You'll need to manually create six custom modes in Cursor and copy the instruction content from the provided files:
 
@@ -163,26 +197,27 @@ For additional help on setting up custom modes in Cursor, refer to the [official
 
 ### QA Functionality
 
-QA is not a separate custom mode but rather a set of validation functions that can be called from any mode. You can invoke QA capabilities by typing "QA" in any mode when you need to perform technical validation. This approach provides flexibility to conduct verification at any point in the development process.
+QA is not a separate custom mode but rather a set of validation functions that can be called from any mode. You can invoke QA capabilities by typing "QA" or "qa" in any mode when you need to perform technical validation. This approach provides flexibility to conduct verification at any point in the development process.
 
 ## Basic Usage
 
 1. **Start with VAN Mode**:
    - Switch to VAN mode in Cursor
-   - Type "VAN" to initiate the initialization process
+   - Type "VAN" or "van" to initiate the initialization process
    - VAN will analyze your project structure and determine complexity
 
 2. **Follow the Workflow Based on Complexity**:
    - **Level 1 tasks**: May proceed directly to IMPLEMENT after VAN
    - **Level 2 tasks**: Simplified workflow (VAN → PLAN → IMPLEMENT → REFLECT)
    - **Level 3-4 tasks**: Full workflow (VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
-   - **At any point**: Type "QA" to perform technical validation
+   - **At any point**: Type "QA" or "qa" to perform technical validation
 
 
 <img src="assets/chat_van.png" height="50"/> <img src="assets/chat_plan.png" height="50" style="display: inline-block;"/> <img src="assets/chat_implement.png" height="50" style="display: inline-block;"/> <img src="assets/chat_creative.png" height="50" style="display: inline-block;"/> <img src="assets/chat_implement.png" height="50" style="display: inline-block;"/> <img src="assets/chat_reflect.png" height="50" style="display: inline-block;"/> <img src="assets/chat_archive.png" height="50" style="display: inline-block;"/>
 
 3. **Mode-Specific Commands**:
    ```
+   # Original Commands (still work)
    VAN - Initialize project and determine complexity
    PLAN - Create detailed implementation plan
    CREATIVE - Explore design options for complex components
@@ -190,6 +225,14 @@ QA is not a separate custom mode but rather a set of validation functions that c
    REFLECT - Review and document lessons learned
    ARCHIVE - Create comprehensive documentation
    QA - Validate technical implementation (can be called from any mode)
+   
+   # New Custom Commands
+   van - Initialize project and determine complexity
+   plan - Create detailed implementation plan
+   arh - Explore design options for complex components
+   do - Systematically build planned components
+   sum - Review and document lessons learned
+   qa - Validate technical implementation (can be called from any mode)
    ```
 
 4. **Starting to work with your project**:
@@ -221,6 +264,51 @@ graph LR
 - **creative-*.md**: Design decision documents generated during CREATIVE mode
 - **reflect-*.md**: Review documents created during REFLECT mode
 
+## Customization
+
+### Custom Commands
+This fork adds custom command support to Memory Bank. You can use either original commands or new custom commands:
+
+| Original | Custom | Mode | Description |
+|----------|--------|------|-------------|
+| `VAN` | `van` | VAN | Initialize project |
+| `PLAN` | `plan` | PLAN | Task planning |
+| `CREATIVE` | `arh` | CREATIVE | Design decisions |
+| `IMPLEMENT` | `do` | IMPLEMENT | Code implementation |
+| `QA` | `qa` | QA | Technical validation |
+| `REFLECT` | `sum` | REFLECT | Review and reflection |
+
+### Installation
+```bash
+# Automatic installation
+chmod +x install.sh
+./install.sh
+
+# Manual installation
+cp custom_modes/van_instructions.md /path/to/your/memory-bank/
+```
+
+### Testing
+```bash
+# Test new commands
+cat test_commands.md
+
+# Test in Cursor
+van    # Should activate VAN Mode
+plan   # Should activate PLAN Mode
+arh    # Should activate CREATIVE Mode
+do     # Should activate IMPLEMENT Mode
+qa     # Should activate QA Mode
+sum    # Should activate REFLECT Mode
+```
+
+### Restoration
+```bash
+# Restore original commands
+cp cursor-memory-bank/custom_modes/van_instructions.md.backup \
+   cursor-memory-bank/custom_modes/van_instructions.md
+```
+
 ## Troubleshooting
 
 ### Common Issues
@@ -231,25 +319,37 @@ graph LR
    - Check that you've switched to the correct mode before issuing commands
    - Make sure you pasted the instructions in the "Advanced options" text box
 
-2. **Rules not loading**:
+2. **Custom commands not working**:
+   - Verify that `custom_modes/van_instructions.md` contains the custom commands
+   - Check that the file was properly copied during installation
+   - Ensure you're using the correct command syntax
+
+3. **Rules not loading**:
    - Make sure the `.cursor/rules/isolation_rules/` directory is in the correct location
    - Verify file permissions allow reading the rule files
 
-3. **Command execution issues**:
+4. **Command execution issues**:
    - Ensure you're running commands from the correct directory
    - Verify platform-specific commands are being used correctly
 
 ## Version Information
 
-This is version v0.7-beta of the Memory Bank system. It introduces significant token optimization improvements over v0.6-beta while maintaining all functionality. See the [Release Notes](RELEASE_NOTES.md) for detailed information about the changes.
+This is version v1.0.0 of the Memory Bank system, based on v0.7-beta with custom command support. It introduces custom command functionality while maintaining all v0.7-beta optimizations.
+
+### Changes from v0.7-beta
+- ✅ Added custom command support
+- ✅ Maintained full backward compatibility
+- ✅ Added REFLECT & ARCHIVE support
+- ✅ Created comprehensive documentation
+- ✅ Added installation and testing tools
 
 ### Ongoing Development
 
 The Memory Bank system is actively being developed and improved. Key points to understand:
 
-- **Work in Progress**: This is a beta version with ongoing development. Expect regular updates, optimizations, and new features.
+- **Work in Progress**: This is a customized version with ongoing development. Expect regular updates, optimizations, and new features.
 - **Feature Optimization**: The modular architecture enables continuous refinement without breaking existing functionality.
-- **Previous Version Available**: If you prefer the stability of the previous version (v0.1-legacy), you can continue using it while this version matures.
+- **Custom Command Support**: Flexible command system that can be easily extended.
 - **Architectural Benefits**: Before deciding which version to use, please read the [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md) to understand the significant benefits of the new architecture.
 
 ## Resources
@@ -259,8 +359,10 @@ The Memory Bank system is actively being developed and improved. Key points to u
 - [Cursor Custom Modes Documentation](https://docs.cursor.com/chat/custom-modes)
 - [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md)
 - [CREATIVE Mode and Claude's "Think" Tool](creative_mode_think_tool.md)
+- [Customization Guide](CUSTOMIZATION.md) - Detailed information about custom commands
+- [Changelog](CHANGELOG.md) - History of changes in this fork
 - Mode-specific instruction files in the `custom_modes/` directory
 
 ---
 
-*Note: This README is for v0.7-beta and subject to change as the system evolves.*
+*Note: This README is for v1.0.0 customized version and subject to change as the system evolves.* 
