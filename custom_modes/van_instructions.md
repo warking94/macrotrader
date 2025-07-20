@@ -7,22 +7,11 @@ graph TD
     %% Main Command Detection
     Start["User Command"] --> CommandDetect{"Command<br>Type?"}
     
-    %% Original Commands (for backward compatibility)
     CommandDetect -->|"VAN"| VAN["VAN Mode"]
     CommandDetect -->|"PLAN"| Plan["PLAN Mode"]
     CommandDetect -->|"CREATIVE"| Creative["CREATIVE Mode"]
     CommandDetect -->|"IMPLEMENT"| Implement["IMPLEMENT Mode"]
     CommandDetect -->|"QA"| QA["QA Mode"]
-    CommandDetect -->|"REFLECT"| Reflect["REFLECT Mode"]
-    CommandDetect -->|"ARCHIVE"| Archive["ARCHIVE Mode"]
-    
-    %% New Custom Commands
-    CommandDetect -->|"van"| VAN
-    CommandDetect -->|"plan"| Plan
-    CommandDetect -->|"arh"| Creative
-    CommandDetect -->|"do"| Implement
-    CommandDetect -->|"qa"| QA
-    CommandDetect -->|"sum"| Reflect
     
     %% Immediate Response Node
     VAN --> VanResp["Respond: OK VAN"]
@@ -30,8 +19,6 @@ graph TD
     Creative --> CreativeResp["Respond: OK CREATIVE"]
     Implement --> ImplResp["Respond: OK IMPLEMENT"]
     QA --> QAResp["Respond: OK QA"]
-    Reflect --> ReflectResp["Respond: OK REFLECT"]
-    Archive --> ArchiveResp["Respond: OK ARCHIVE"]
     
     %% Memory Bank Check
     VanResp --> CheckMB_Van["Check Memory Bank<br>& tasks.md Status"]
@@ -39,8 +26,6 @@ graph TD
     CreativeResp --> CheckMB_Creative["Check Memory Bank<br>& tasks.md Status"]
     ImplResp --> CheckMB_Impl["Check Memory Bank<br>& tasks.md Status"]
     QAResp --> CheckMB_QA["Check Memory Bank<br>& tasks.md Status"]
-    ReflectResp --> CheckMB_Reflect["Check Memory Bank<br>& tasks.md Status"]
-    ArchiveResp --> CheckMB_Archive["Check Memory Bank<br>& tasks.md Status"]
     
     %% Rule Loading
     CheckMB_Van --> LoadVan["Load Rule:<br>isolation_rules/visual-maps/van_mode_split/van-mode-map"]
@@ -48,8 +33,6 @@ graph TD
     CheckMB_Creative --> LoadCreative["Load Rule:<br>isolation_rules/visual-maps/creative-mode-map"]
     CheckMB_Impl --> LoadImpl["Load Rule:<br>isolation_rules/visual-maps/implement-mode-map"]
     CheckMB_QA --> LoadQA["Load Rule:<br>isolation_rules/visual-maps/qa-mode-map"]
-    CheckMB_Reflect --> LoadReflect["Load Rule:<br>isolation_rules/visual-maps/reflect-mode-map"]
-    CheckMB_Archive --> LoadArchive["Load Rule:<br>isolation_rules/visual-maps/archive-mode-map"]
     
     %% Rule Execution with Memory Bank Updates
     LoadVan --> ExecVan["Execute Process<br>in Rule"]
@@ -57,8 +40,6 @@ graph TD
     LoadCreative --> ExecCreative["Execute Process<br>in Rule"]
     LoadImpl --> ExecImpl["Execute Process<br>in Rule"]
     LoadQA --> ExecQA["Execute Process<br>in Rule"]
-    LoadReflect --> ExecReflect["Execute Process<br>in Rule"]
-    LoadArchive --> ExecArchive["Execute Process<br>in Rule"]
     
     %% Memory Bank Continuous Updates
     ExecVan --> UpdateMB_Van["Update Memory Bank<br>& tasks.md"]
@@ -66,8 +47,6 @@ graph TD
     ExecCreative --> UpdateMB_Creative["Update Memory Bank<br>& tasks.md"]
     ExecImpl --> UpdateMB_Impl["Update Memory Bank<br>& tasks.md"]
     ExecQA --> UpdateMB_QA["Update Memory Bank<br>& tasks.md"]
-    ExecReflect --> UpdateMB_Reflect["Update Memory Bank<br>& tasks.md"]
-    ExecArchive --> UpdateMB_Archive["Update Memory Bank<br>& tasks.md"]
     
     %% Verification with Memory Bank Checks
     UpdateMB_Van --> VerifyVan{"Process<br>Complete?"}
@@ -75,8 +54,6 @@ graph TD
     UpdateMB_Creative --> VerifyCreative{"Process<br>Complete?"}
     UpdateMB_Impl --> VerifyImpl{"Process<br>Complete?"}
     UpdateMB_QA --> VerifyQA{"Process<br>Complete?"}
-    UpdateMB_Reflect --> VerifyReflect{"Process<br>Complete?"}
-    UpdateMB_Archive --> VerifyArchive{"Process<br>Complete?"}
     
     %% Outcomes
     VerifyVan -->|"Yes"| CompleteVan["VAN Process<br>Complete"]
@@ -104,24 +81,12 @@ graph TD
     RetryQA --- ReadMB_QA["Reference Memory Bank<br>for Context"]
     ReadMB_QA --> ExecQA
     
-    VerifyReflect -->|"Yes"| CompleteReflect["REFLECT Process<br>Complete"]
-    VerifyReflect -->|"No"| RetryReflect["Resume<br>REFLECT Process"]
-    RetryReflect --- ReadMB_Reflect["Reference Memory Bank<br>for Context"]
-    ReadMB_Reflect --> ExecReflect
-    
-    VerifyArchive -->|"Yes"| CompleteArchive["ARCHIVE Process<br>Complete"]
-    VerifyArchive -->|"No"| RetryArchive["Resume<br>ARCHIVE Process"]
-    RetryArchive --- ReadMB_Archive["Reference Memory Bank<br>for Context"]
-    ReadMB_Archive --> ExecArchive
-    
     %% Final Memory Bank Updates at Completion
     CompleteVan --> FinalMB_Van["Update Memory Bank<br>with Completion Status"]
     CompletePlan --> FinalMB_Plan["Update Memory Bank<br>with Completion Status"]
     CompleteCreative --> FinalMB_Creative["Update Memory Bank<br>with Completion Status"]
     CompleteImpl --> FinalMB_Impl["Update Memory Bank<br>with Completion Status"]
     CompleteQA --> FinalMB_QA["Update Memory Bank<br>with Completion Status"]
-    CompleteReflect --> FinalMB_Reflect["Update Memory Bank<br>with Completion Status"]
-    CompleteArchive --> FinalMB_Archive["Update Memory Bank<br>with Completion Status"]
     
     %% Mode Transitions with Memory Bank Preservation
     FinalMB_Van -->|"Level 1"| TransToImpl["→ IMPLEMENT Mode"]
@@ -129,9 +94,6 @@ graph TD
     FinalMB_Plan --> TransToCreative["→ CREATIVE Mode"]
     FinalMB_Creative --> TransToImpl2["→ IMPLEMENT Mode"]
     FinalMB_Impl --> TransToQA["→ QA Mode"]
-    FinalMB_QA --> TransToReflect["→ REFLECT Mode"]
-    FinalMB_Reflect --> TransToArchive["→ ARCHIVE Mode"]
-    FinalMB_Archive --> TransToVan["→ VAN Mode"]
     
     %% Memory Bank System
     MemoryBank["MEMORY BANK<br>CENTRAL SYSTEM"] -.-> tasks["tasks.md<br>Source of Truth"]
@@ -157,48 +119,36 @@ graph TD
     style Creative fill:#fcf,stroke:#333,color:black
     style Implement fill:#cff,stroke:#333,color:black
     style QA fill:#fcc,stroke:#333,color:black
-    style Reflect fill:#b3e6cc,stroke:#333,color:black
-    style Archive fill:#e6ccff,stroke:#333,color:black
     
     style VanResp fill:#d9e6ff,stroke:#99ccff,color:black
     style PlanResp fill:#d9e6ff,stroke:#99ccff,color:black
     style CreativeResp fill:#d9e6ff,stroke:#99ccff,color:black
     style ImplResp fill:#d9e6ff,stroke:#99ccff,color:black
     style QAResp fill:#d9e6ff,stroke:#99ccff,color:black
-    style ReflectResp fill:#d9e6ff,stroke:#99ccff,color:black
-    style ArchiveResp fill:#d9e6ff,stroke:#99ccff,color:black
     
     style LoadVan fill:#a3dded,stroke:#4db8db,color:black
     style LoadPlan fill:#a3dded,stroke:#4db8db,color:black
     style LoadCreative fill:#a3dded,stroke:#4db8db,color:black
     style LoadImpl fill:#a3dded,stroke:#4db8db,color:black
     style LoadQA fill:#a3dded,stroke:#4db8db,color:black
-    style LoadReflect fill:#a3dded,stroke:#4db8db,color:black
-    style LoadArchive fill:#a3dded,stroke:#4db8db,color:black
     
     style ExecVan fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecPlan fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecCreative fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecImpl fill:#a3e0ae,stroke:#4dbb5f,color:black
     style ExecQA fill:#a3e0ae,stroke:#4dbb5f,color:black
-    style ExecReflect fill:#a3e0ae,stroke:#4dbb5f,color:black
-    style ExecArchive fill:#a3e0ae,stroke:#4dbb5f,color:black
     
     style VerifyVan fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyPlan fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyCreative fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyImpl fill:#e699d9,stroke:#d94dbb,color:black
     style VerifyQA fill:#e699d9,stroke:#d94dbb,color:black
-    style VerifyReflect fill:#e699d9,stroke:#d94dbb,color:black
-    style VerifyArchive fill:#e699d9,stroke:#d94dbb,color:black
     
     style CompleteVan fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompletePlan fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompleteCreative fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompleteImpl fill:#8cff8c,stroke:#4dbb5f,color:black
     style CompleteQA fill:#8cff8c,stroke:#4dbb5f,color:black
-    style CompleteReflect fill:#8cff8c,stroke:#4dbb5f,color:black
-    style CompleteArchive fill:#8cff8c,stroke:#4dbb5f,color:black
     
     style MemoryBank fill:#f9d77e,stroke:#d9b95c,stroke-width:2px,color:black
     style tasks fill:#f9d77e,stroke:#d9b95c,color:black

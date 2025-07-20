@@ -74,7 +74,3 @@ pids
 #claude.code specific
 .claude/
 CLAUDE.md
-# Memory Bank Customization
-*.backup
-*.tmp
-temp/
