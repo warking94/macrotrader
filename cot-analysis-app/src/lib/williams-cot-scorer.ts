@@ -60,8 +60,8 @@ class WilliamsCOTScorer {
       .limit(lookBackWeeks + 13) // Extra for rate of change calculations
 
     if (error) throw error
-    if (!historicalData || historicalData.length < 20) {
-      throw new Error(`Insufficient data for market ${marketId}`)
+    if (!historicalData || historicalData.length < Math.min(10, lookBackWeeks + 5)) {
+      throw new Error(`Insufficient data for market ${marketId}: need at least ${Math.min(10, lookBackWeeks + 5)} records, got ${historicalData?.length || 0}`)
     }
 
     // Get market info
@@ -91,7 +91,7 @@ class WilliamsCOTScorer {
       const windowEnd = Math.min(i + lookBackWeeks, dataWithNets.length)
       const window = dataWithNets.slice(windowStart, windowEnd)
 
-      if (window.length < 20) continue // Need minimum data for meaningful statistics
+      if (window.length < Math.min(10, lookBackWeeks)) continue // Need minimum data for meaningful statistics
 
       // Calculate statistics for normalization
       const commercialNets = window.map(d => d.commercialNet)

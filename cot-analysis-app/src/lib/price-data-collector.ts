@@ -34,7 +34,7 @@ class PriceDataCollector {
       console.log(`Fetching price data for ${marketSymbol} (market ID: ${marketId})`)
       
       // Fetch price data from Alpha Vantage
-      const priceData = await alphaVantageApi.fetchPriceDataForMarket(marketSymbol)
+      const priceData = await alphaVantageApi.fetchPriceDataForMarket(marketSymbol, outputSize)
       
       if (priceData.length === 0) {
         result.message = `No price data found for ${marketSymbol}`

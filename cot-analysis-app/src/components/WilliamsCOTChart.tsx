@@ -75,8 +75,8 @@ export default function WilliamsCOTChart({
         // Fetch price data overlay if enabled
         if (showPriceOverlay) {
           try {
-            const oldestDate = chartData[chartData.length - 1]?.reportDate
             const latestDate = chartData[0]?.reportDate
+            const oldestDate = chartData[chartData.length - 1]?.reportDate
             
             if (oldestDate && latestDate) {
               const priceResponse = await fetch(

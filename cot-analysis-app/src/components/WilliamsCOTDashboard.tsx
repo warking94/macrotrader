@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import WilliamsCOTChart from './WilliamsCOTChart'
+import DualCOTChart from './DualCOTChart'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -38,11 +39,11 @@ export default function WilliamsCOTDashboard() {
   const [error, setError] = useState<string | null>(null)
   const [selectedMarket, setSelectedMarket] = useState<MarketScore | null>(null)
   const [lookBackWeeks, setLookBackWeeks] = useState(52)
-  const [showPriceOverlay, setShowPriceOverlay] = useState(false)
 
   useEffect(() => {
     fetchDashboardData()
   }, [])
+
 
   const fetchDashboardData = async () => {
     try {
@@ -66,6 +67,7 @@ export default function WilliamsCOTDashboard() {
       setLoading(false)
     }
   }
+
 
   const getSignalColor = (bias: string) => {
     switch (bias) {
@@ -163,7 +165,7 @@ export default function WilliamsCOTDashboard() {
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="overview">Market Overview</TabsTrigger>
           <TabsTrigger value="extremes">Extreme Signals</TabsTrigger>
-          <TabsTrigger value="charts">Individual Charts</TabsTrigger>
+          <TabsTrigger value="charts">COT + Price Analysis</TabsTrigger>
         </TabsList>
 
         <TabsContent value="overview" className="space-y-4">
@@ -345,30 +347,17 @@ export default function WilliamsCOTDashboard() {
                 </SelectContent>
               </Select>
             </div>
-
-            <div className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                id="price-overlay"
-                checked={showPriceOverlay}
-                onChange={(e) => setShowPriceOverlay(e.target.checked)}
-                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-              />
-              <label htmlFor="price-overlay" className="text-sm font-medium">
-                Price Overlay
-              </label>
-            </div>
           </div>
 
           {selectedMarket && (
-            <WilliamsCOTChart
+            <DualCOTChart
               marketId={selectedMarket.marketId}
               symbol={selectedMarket.symbol}
               lookBackWeeks={lookBackWeeks}
-              showPriceOverlay={showPriceOverlay}
             />
           )}
         </TabsContent>
+
       </Tabs>
     </div>
   )

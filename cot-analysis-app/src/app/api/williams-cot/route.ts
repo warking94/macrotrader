@@ -67,6 +67,10 @@ export async function GET(request: NextRequest) {
         // Get latest score for summary
         const latestScore = marketScores[marketScores.length - 1]
         
+        if (!latestScore) {
+          throw new Error(`No scores calculated for market ${marketId}`)
+        }
+        
         // Calculate historical extremes for context
         const extremeReadings = marketScores.filter(s => s.extremeLevel)
         const bullishExtremes = extremeReadings.filter(s => s.bias === 'BULLISH')
@@ -83,7 +87,7 @@ export async function GET(request: NextRequest) {
               extremeReadings: extremeReadings.length,
               bullishExtremes: bullishExtremes.length,
               bearishExtremes: bearishExtremes.length,
-              averageScore: Math.round(marketScores.reduce((sum, s) => sum + s.overallScore, 0) / marketScores.length),
+              averageScore: marketScores.length > 0 ? Math.round(marketScores.reduce((sum, s) => sum + s.overallScore, 0) / marketScores.length) : 0,
               currentPercentile: calculatePercentile(latestScore.overallScore, marketScores.map(s => s.overallScore))
             }
           },

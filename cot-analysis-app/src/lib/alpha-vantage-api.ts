@@ -157,7 +157,7 @@ class AlphaVantageApiService {
     }
   }
 
-  async fetchPriceDataForMarket(marketSymbol: string): Promise<PriceData[]> {
+  async fetchPriceDataForMarket(marketSymbol: string, outputSize: 'compact' | 'full' = 'compact'): Promise<PriceData[]> {
     // Map our market symbols to Alpha Vantage symbols
     const symbolMapping: Record<string, { type: 'forex' | 'commodity', symbol?: string, from?: string, to?: string }> = {
       'EUR/USD': { type: 'forex', from: 'EUR', to: 'USD' },
@@ -178,9 +178,9 @@ class AlphaVantageApiService {
     }
 
     if (mapping.type === 'forex' && mapping.from && mapping.to) {
-      return this.fetchForexData(mapping.from, mapping.to)
+      return this.fetchForexData(mapping.from, mapping.to, outputSize)
     } else if (mapping.type === 'commodity' && mapping.symbol) {
-      return this.fetchCommodityData(mapping.symbol)
+      return this.fetchCommodityData(mapping.symbol, outputSize)
     } else {
       throw new Error(`Invalid mapping configuration for market: ${marketSymbol}`)
     }
