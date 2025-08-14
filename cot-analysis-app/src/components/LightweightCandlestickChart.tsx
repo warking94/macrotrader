@@ -23,17 +23,13 @@ interface LightweightCandlestickChartProps {
   symbol: string
   height?: number
   showVolume?: boolean
-  onTimeSync?: (time: UTCTimestamp | null) => void
-  syncedTime?: UTCTimestamp | null
 }
 
 export default function LightweightCandlestickChart({
   data,
   symbol,
   height = 350,
-  showVolume = false,
-  onTimeSync,
-  syncedTime
+  showVolume = false
 }: LightweightCandlestickChartProps) {
   const chartContainerRef = useRef<HTMLDivElement>(null)
   const chartRef = useRef<IChartApi | null>(null)
@@ -106,21 +102,6 @@ export default function LightweightCandlestickChart({
       })
     }
 
-    // Add crosshair move handler for time synchronization
-    if (onTimeSync) {
-      try {
-        chart.subscribeCrosshairMove((param) => {
-          // Only sync if we have valid time data
-          if (param && param.time) {
-            onTimeSync(param.time as UTCTimestamp)
-          } else {
-            onTimeSync(null)
-          }
-        })
-      } catch (error) {
-        console.warn('Failed to setup candlestick time sync:', error)
-      }
-    }
 
     // Handle resize
     const handleResize = () => {
@@ -137,7 +118,7 @@ export default function LightweightCandlestickChart({
       window.removeEventListener('resize', handleResize)
       chart.remove()
     }
-  }, [height, showVolume, onTimeSync])
+  }, [height, showVolume])
 
   // Update data when data prop changes
   useEffect(() => {
@@ -175,19 +156,6 @@ export default function LightweightCandlestickChart({
       chartRef.current.timeScale().fitContent()
     }
   }, [data, showVolume])
-
-  // Handle synchronized time updates
-  useEffect(() => {
-    if (!chartRef.current || !syncedTime) return
-
-    try {
-      // For now, we'll disable the automatic range setting that was causing data to disappear
-      // Future enhancement: implement proper crosshair positioning without affecting visible range
-      console.log('Time sync received:', syncedTime)
-    } catch (error) {
-      console.warn('Time sync error:', error)
-    }
-  }, [syncedTime])
 
   const formatPrice = (price: number) => {
     // Determine decimal places based on symbol type

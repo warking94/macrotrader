@@ -5,7 +5,6 @@ import LightweightCOTChart from './LightweightCOTChart'
 import LightweightCandlestickChart from './LightweightCandlestickChart'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { UTCTimestamp } from 'lightweight-charts'
 
 interface DualCOTChartProps {
   marketId: number
@@ -30,8 +29,6 @@ export default function DualCOTChart({
   const [priceData, setPriceData] = useState<CandlestickData[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [syncedTime, setSyncedTime] = useState<UTCTimestamp | null>(null)
-
   useEffect(() => {
     fetchPriceData()
   }, [marketId, lookBackWeeks])
@@ -102,18 +99,6 @@ export default function DualCOTChart({
     )
   }
 
-  // Handle time synchronization between charts - temporarily disabled to fix disappearing data
-  const handleCOTTimeSync = (time: UTCTimestamp | null) => {
-    // Temporarily disable sync to prevent data disappearing
-    console.log('COT time sync (disabled):', time)
-    // setSyncedTime(time)
-  }
-
-  const handleCandlestickTimeSync = (time: UTCTimestamp | null) => {
-    // Temporarily disable sync to prevent data disappearing
-    console.log('Candlestick time sync (disabled):', time)
-    // setSyncedTime(time)
-  }
 
   return (
     <div className="space-y-6">

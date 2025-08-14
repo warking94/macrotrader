@@ -26,15 +26,13 @@ interface LightweightCOTChartProps {
   symbol: string
   lookBackWeeks?: number
   height?: number
-  onTimeSync?: (time: UTCTimestamp | null) => void
 }
 
 export default function LightweightCOTChart({
   marketId,
   symbol,
   lookBackWeeks = 52,
-  height = 350,
-  onTimeSync
+  height = 350
 }: LightweightCOTChartProps) {
   const chartContainerRef = useRef<HTMLDivElement>(null)
   const chartRef = useRef<IChartApi | null>(null)
