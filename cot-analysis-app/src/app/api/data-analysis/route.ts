@@ -19,8 +19,9 @@ export async function GET() {
     // Process the data to get statistics per market
     const marketStats = marketBreakdown?.reduce((acc, record) => {
       const marketId = record.market_id
-      const symbol = record.market?.symbol || 'Unknown'
-      const name = record.market?.name || 'Unknown'
+      const market = record.market as { symbol: string; name: string } | null
+      const symbol = market?.symbol || 'Unknown'
+      const name = market?.name || 'Unknown'
       
       if (!acc[marketId]) {
         acc[marketId] = {
